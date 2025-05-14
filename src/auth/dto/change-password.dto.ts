@@ -4,4 +4,8 @@ export class ChangePasswordDto {
   @IsString()
   @MinLength(8)
   newPassword!: string;
+
+  @IsString()
+  @IsNotEmpty()
+  currentPassword!: string;
 }
